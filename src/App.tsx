@@ -20,7 +20,7 @@ export default function App() {
     deckRef.current = new Reveal(deckDivRef.current, {
       history: true,
     });
-    deckRef.current.initialize().then(() => {});
+    deckRef.current.initialize().catch(console.error);
 
     return () => {
       deckRef.current?.destroy();
