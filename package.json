@@ -2,6 +2,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "assert-ts": "^0.3.4",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "reveal.js": "^5.2.1"
@@ -14,5 +15,10 @@
     "@vitejs/plugin-react-swc": "^4.2.2",
     "typescript": "^5.9.3",
     "vite": "^7.3.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   }
 }
