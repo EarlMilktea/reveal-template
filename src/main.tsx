@@ -9,5 +9,5 @@ assert(elem !== null);
 createRoot(elem).render(
   <StrictMode>
     <App />
-  </StrictMode>
+  </StrictMode>,
 );
