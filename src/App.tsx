@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-import assert from "assert-ts";
+import assert from "minimalistic-assert";
 import { useEffect, useRef } from "react";
 import Reveal from "reveal.js";
 
@@ -12,10 +12,10 @@ export default function App() {
   const deckRef = useRef<Reveal.Api | null>(null);
 
   useEffect(() => {
-    if (deckRef.current !== null) {
+    if (deckRef.current) {
       return;
     }
-    assert(deckDivRef.current !== null);
+    assert(deckDivRef.current);
 
     deckRef.current = new Reveal(deckDivRef.current, {
       history: true,

@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "assert-ts": "^0.3.4",
+    "minimalistic-assert": "^1.0.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "reveal.js": "^5.2.1"
@@ -10,6 +10,7 @@
   "devDependencies": {
     "@eslint/js": "^9.39.2",
     "@tsconfig/vite-react": "^7.0.2",
+    "@types/minimalistic-assert": "^1.0.3",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@types/reveal.js": "^5.2.2",
