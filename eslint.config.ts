@@ -11,6 +11,9 @@ export default defineConfig([
     files: ["**/*.{ts,tsx}"],
   },
   {
+    ignores: ["node_modules", "dist"],
+  },
+  {
     languageOptions: {
       parserOptions: {
         projectService: true,
