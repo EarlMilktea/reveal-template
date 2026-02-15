@@ -1,7 +1,9 @@
 {
-  "private": true,
+  "name": "slide",
   "type": "module",
+  "private": true,
   "dependencies": {
+    "@vanilla-extract/css": "^1.18.0",
     "minimalistic-assert": "^1.0.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
@@ -14,6 +16,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@types/reveal.js": "^5.2.2",
+    "@vanilla-extract/vite-plugin": "^5.1.4",
     "@vitejs/plugin-react-swc": "^4.2.3",
     "eslint": "^9.39.2",
     "eslint-plugin-react": "^7.37.5",
