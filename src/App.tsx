@@ -18,6 +18,7 @@ export default function App() {
     assert(deckDivRef.current);
 
     deckRef.current = new Reveal(deckDivRef.current, {
+      center: false,
       history: true,
     });
     deckRef.current.initialize().catch(console.error);
