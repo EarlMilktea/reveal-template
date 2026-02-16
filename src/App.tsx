@@ -1,11 +1,16 @@
 /// <reference types="vite/client" />
 
+import "reveal.js/dist/reset.css";
+import "reveal.js/dist/reveal.css";
+
 import assert from "minimalistic-assert";
 import { useEffect, useRef } from "react";
 import Reveal from "reveal.js";
 
-import "reveal.js/dist/reset.css";
-import "reveal.js/dist/reveal.css";
+const OPTIONS: Readonly<Reveal.Options> = {
+  center: false,
+  history: true,
+};
 
 export default function App() {
   const deckDivRef = useRef<HTMLDivElement | null>(null);
@@ -17,10 +22,7 @@ export default function App() {
     }
     assert(deckDivRef.current);
 
-    deckRef.current = new Reveal(deckDivRef.current, {
-      center: false,
-      history: true,
-    });
+    deckRef.current = new Reveal(deckDivRef.current, OPTIONS);
     deckRef.current.initialize().catch(console.error);
 
     return () => {
