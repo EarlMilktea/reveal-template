@@ -1,4 +1,5 @@
 import js from "@eslint/js";
+import jsxAlly from "eslint-plugin-jsx-a11y";
 import pluginReact from "eslint-plugin-react";
 import pluginHooks from "eslint-plugin-react-hooks";
 import pluginUnicorn from "eslint-plugin-unicorn";
@@ -32,6 +33,7 @@ export default defineConfig([
   pluginReact.configs.flat["jsx-runtime"],
   pluginHooks.configs.flat.recommended,
   pluginUnicorn.configs.recommended,
+  jsxAlly.flatConfigs.recommended,
   {
     rules: {
       "unicorn/filename-case": "off",
