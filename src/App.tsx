@@ -2,14 +2,15 @@
 
 import "reveal.js/dist/reset.css";
 import "reveal.js/dist/reveal.css";
+import "reveal.js/dist/theme/simple.css";
 
 import assert from "minimalistic-assert";
 import { useEffect, useRef } from "react";
 import Reveal from "reveal.js";
 
 const OPTIONS: Readonly<Reveal.Options> = {
-  center: false,
   history: true,
+  slideNumber: true,
 };
 
 export default function App() {
