@@ -2,6 +2,7 @@ import js from "@eslint/js";
 import jsxAlly from "eslint-plugin-jsx-a11y";
 import pluginReact from "eslint-plugin-react";
 import pluginHooks from "eslint-plugin-react-hooks";
+import { reactRefresh } from "eslint-plugin-react-refresh";
 import pluginUnicorn from "eslint-plugin-unicorn";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
@@ -32,6 +33,7 @@ export default defineConfig([
   pluginReact.configs.flat.recommended,
   pluginReact.configs.flat["jsx-runtime"],
   pluginHooks.configs.flat.recommended,
+  reactRefresh.configs.recommended(),
   pluginUnicorn.configs.recommended,
   jsxAlly.flatConfigs.recommended,
   {
