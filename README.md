@@ -1,3 +1,3 @@
 # 📦️ reveal-template
 
-Reveal.js + TypeScript React
+Interactive presentation using Reveal.js + TypeScript React
