@@ -1,9 +1,10 @@
 import js from "@eslint/js";
+import { importX } from "eslint-plugin-import-x";
 import jsxAlly from "eslint-plugin-jsx-a11y";
-import pluginReact from "eslint-plugin-react";
-import pluginHooks from "eslint-plugin-react-hooks";
+import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
 import { reactRefresh } from "eslint-plugin-react-refresh";
-import pluginUnicorn from "eslint-plugin-unicorn";
+import unicorn from "eslint-plugin-unicorn";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -29,13 +30,18 @@ export default defineConfig([
     },
   },
   js.configs.recommended,
+  // eslint-disable-next-line import-x/no-named-as-default-member
   tseslint.configs.strictTypeChecked,
-  pluginReact.configs.flat.recommended,
-  pluginReact.configs.flat["jsx-runtime"],
-  pluginHooks.configs.flat.recommended,
+  react.configs.flat.recommended,
+  react.configs.flat["jsx-runtime"],
+  reactHooks.configs.flat.recommended,
   reactRefresh.configs.recommended(),
-  pluginUnicorn.configs.recommended,
+  unicorn.configs.recommended,
   jsxAlly.flatConfigs.recommended,
+  // @ts-expect-error - broken stubs
+  importX.flatConfigs.recommended,
+  // @ts-expect-error - broken stubs
+  importX.flatConfigs.typescript,
   {
     rules: {
       "unicorn/filename-case": "off",
