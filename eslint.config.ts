@@ -1,11 +1,12 @@
 import js from "@eslint/js";
+import { defineConfig } from "eslint/config";
 import { importX } from "eslint-plugin-import-x";
 import jsxAlly from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import { reactRefresh } from "eslint-plugin-react-refresh";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
 import unicorn from "eslint-plugin-unicorn";
-import { defineConfig } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
@@ -42,6 +43,15 @@ export default defineConfig([
   importX.flatConfigs.recommended,
   // @ts-expect-error - broken stubs
   importX.flatConfigs.typescript,
+  {
+    plugins: {
+      "simple-import-sort": simpleImportSort,
+    },
+    rules: {
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
+    },
+  },
   {
     rules: {
       "unicorn/filename-case": "off",
