@@ -30,6 +30,7 @@
     "eslint-plugin-unicorn": "^63.0.0",
     "globals": "^17.3.0",
     "jiti": "^2.6.1",
+    "npm-run-all2": "^8.0.4",
     "prettier": "^3.8.1",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.55.0",
@@ -37,9 +38,10 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:bundle": "vite build",
+    "build:check": "tsc",
+    "build": "run-p build:*",
     "preview": "vite preview",
-    "check": "tsc",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint"
