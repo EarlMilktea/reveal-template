@@ -2,7 +2,7 @@
 
 import "reveal.js/dist/reset.css";
 import "reveal.js/dist/reveal.css";
-import "reveal.js/dist/theme/simple.css";
+import "./custom.css.ts";
 
 import assert from "minimalistic-assert";
 import { useEffect, useRef } from "react";
