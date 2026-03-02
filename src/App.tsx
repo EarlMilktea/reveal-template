@@ -6,7 +6,6 @@ import "./custom.css.ts";
 
 import assert from "minimalistic-assert";
 import { useEffect, useRef } from "react";
-import Reveal from "reveal.js";
 
 const OPTIONS: Readonly<Reveal.Options> = {
   history: true,
@@ -21,10 +20,17 @@ export default function App() {
     if (deckRef.current) {
       return;
     }
-    assert(deckDivRef.current);
 
-    deckRef.current = new Reveal(deckDivRef.current, OPTIONS);
-    deckRef.current.initialize().catch(console.error);
+    const init = async () => {
+      assert(deckDivRef.current);
+
+      const { default: Reveal } = await import("reveal.js");
+      deckRef.current = new Reveal(deckDivRef.current, OPTIONS);
+
+      await deckRef.current.initialize();
+    };
+
+    init().catch(console.error);
 
     return () => {
       deckRef.current?.destroy();
