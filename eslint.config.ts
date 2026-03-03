@@ -1,5 +1,6 @@
 import js from "@eslint/js";
 import { defineConfig } from "eslint/config";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import { importX } from "eslint-plugin-import-x";
 import jsxAlly from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
@@ -37,12 +38,17 @@ export default defineConfig([
   react.configs.flat["jsx-runtime"],
   reactHooks.configs.flat.recommended,
   reactRefresh.configs.recommended(),
+  // @ts-expect-error - broken types
+  importX.flatConfigs.recommended,
+  // @ts-expect-error - broken types
+  importX.flatConfigs.typescript,
   unicorn.configs.recommended,
   jsxAlly.flatConfigs.recommended,
-  // @ts-expect-error - broken stubs
-  importX.flatConfigs.recommended,
-  // @ts-expect-error - broken stubs
-  importX.flatConfigs.typescript,
+  {
+    settings: {
+      "import-x/resolver-next": [createTypeScriptImportResolver()],
+    },
+  },
   {
     plugins: {
       "simple-import-sort": simpleImportSort,
