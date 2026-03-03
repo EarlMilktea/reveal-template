@@ -1,3 +1,8 @@
+/// <reference types="vite/client" />
+
+import "reveal.js/dist/reset.css";
+import "reveal.js/dist/reveal.css";
+import "./custom.css.ts";
 import "./global.css.ts";
 
 import assert from "minimalistic-assert";
