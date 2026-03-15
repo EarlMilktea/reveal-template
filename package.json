@@ -3,11 +3,12 @@
   "type": "module",
   "private": true,
   "dependencies": {
+    "@revealjs/react": "^0.1.2",
     "@vanilla-extract/css": "^1.18.0",
     "minimalistic-assert": "^1.0.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "reveal.js": "^5.2.1"
+    "reveal.js": "^6.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
