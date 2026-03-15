@@ -1,9 +1,9 @@
-import RevealRoot from "./RevealRoot.tsx";
+import { Deck, Slide } from "@revealjs/react";
 
-const OPTIONS: Readonly<Reveal.Options> = {
+const OPTIONS = {
   history: true,
   slideNumber: true,
-};
+} as const;
 
 /**
  * The app component.
@@ -11,9 +11,9 @@ const OPTIONS: Readonly<Reveal.Options> = {
  */
 export default function App() {
   return (
-    <RevealRoot options={OPTIONS}>
-      <section>Slide 1</section>
-      <section>Slide 2</section>
-    </RevealRoot>
+    <Deck config={OPTIONS}>
+      <Slide>Slide 1</Slide>
+      <Slide>Slide 2</Slide>
+    </Deck>
   );
 }
