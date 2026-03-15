@@ -39,9 +39,7 @@ export default defineConfig([
   react.configs.flat["jsx-runtime"],
   reactHooks.configs.flat.recommended,
   reactRefresh.configs.recommended(),
-  // @ts-expect-error - broken types
   importX.flatConfigs.recommended,
-  // @ts-expect-error - broken types
   importX.flatConfigs.typescript,
   unicorn.configs.recommended,
   jsxAlly.flatConfigs.recommended,
