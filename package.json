@@ -11,7 +11,7 @@
     "reveal.js": "^6.0.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.2",
+    "@eslint/js": "9.39.4",
     "@tsconfig/vite-react": "^7.0.2",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "@types/minimalistic-assert": "^1.0.3",
@@ -20,7 +20,7 @@
     "@types/reveal.js": "^5.2.2",
     "@vanilla-extract/vite-plugin": "^5.2.2",
     "@vitejs/plugin-react": "^6.0.1",
-    "eslint": "^9.39.2",
+    "eslint": "9.39.4",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import-x": "^4.16.1",
     "eslint-plugin-jsdoc": "^62.9.0",
