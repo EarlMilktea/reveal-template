@@ -2,7 +2,6 @@ import js from "@eslint/js";
 import { defineConfig } from "eslint/config";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import { importX } from "eslint-plugin-import-x";
-import jsDoc from "eslint-plugin-jsdoc";
 import jsxAlly from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -43,7 +42,6 @@ export default defineConfig([
   importX.flatConfigs.typescript,
   unicorn.configs.recommended,
   jsxAlly.flatConfigs.recommended,
-  jsDoc.configs["flat/recommended-typescript-error"],
   {
     settings: {
       "import-x/resolver-next": [createTypeScriptImportResolver()],

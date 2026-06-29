@@ -5,10 +5,6 @@ const OPTIONS = {
   slideNumber: true,
 } as const;
 
-/**
- * The app component.
- * @returns Slides.
- */
 export default function App() {
   return (
     <Deck config={OPTIONS}>
