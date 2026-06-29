@@ -10,12 +10,12 @@ import { StrictMode } from "react";
 
 import App from "./App.tsx";
 
-const elem = document.querySelector("#root");
-assert(elem);
+const root = document.querySelector("#root");
+assert(root);
 
 const { createRoot } = await import("react-dom/client");
 
-createRoot(elem).render(
+createRoot(root).render(
   <StrictMode>
     <App />
   </StrictMode>,
